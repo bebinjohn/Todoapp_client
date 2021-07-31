@@ -1,0 +1,205 @@
+.new_todo_container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.new_todo_container > div {
+  flex: 1;
+  border-bottom: 1px solid rgba(231, 229, 229, 0.575);
+  margin-bottom: 5px;
+  padding-bottom: 3px;
+}
+.Todo_Title h3 {
+  width: 130px;
+  height: 40px;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.Todo_Title h3::-webkit-scrollbar {
+  width: 0 !important;
+}
+.Todo_Title h3 {
+  font-family: Mulish;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+}
+.Todo_Title {
+  display: flex;
+}
+.Todo_Title svg {
+  margin: 8px 10px 5px 0;
+}
+
+.Todo_Status_Pending,
+.Todo_Status_Progress,
+.Todo_Status_Completed {
+  width: 80px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3px;
+  background: rgba(242, 153, 74, 0.2);
+  border-radius: 8px;
+}
+.Todo_Status_Pending > div,
+.Todo_Status_Completed > div,
+.Todo_Status_Progress > div {
+  color: #f2994a;
+  font-family: Mulish;
+  font-size: 0.8em;
+}
+
+.Todo_Status_Completed {
+  background-color: rgb(204, 247, 204);
+}
+.Todo_Status_Progress {
+  background-color: #8bd5ee;
+}
+.Todo_Status_Completed > div {
+  color: green;
+}
+.Todo_Status_Progress > div {
+  color: blue;
+}
+.Todo_Type_Minor > div,
+.Todo_Type_Normal > div,
+.Todo_Type_Critical > div {
+  width: 5px;
+  height: 5px;
+  border: 2px solid green;
+  border-radius: 50%;
+  margin: 7px 6px 0 0;
+  background-color: green;
+}
+.Todo_Type_Critical > div {
+  border: 2px solid red;
+  background-color: red;
+}
+.Todo_Type_Normal > div {
+  border: rgb(163, 163, 7);
+  width: 10px;
+  height: 10px;
+  background-color: rgb(202, 202, 11);
+}
+.Todo_Type_Minor,
+.Todo_Type_Critical,
+.Todo_Type_Normal {
+  display: flex;
+}
+.Todo_Type_Minor p,
+.Todo_Type_Normal p,
+.Todo_Type_Critical p {
+  font-family: Mulish;
+  color: #5c626d;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+
+.Edit_button {
+  background-color: #dcd9d9;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.Edit_button div {
+  font-size: 1.1em;
+  padding-bottom: 8px;
+  font-family: Mulish;
+  color: gray;
+}
+
+.Todo_Image_container {
+  display: flex;
+  width: 100px;
+  height: 40px;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.Todo_Image_container::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.Todo_members img {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.Todo_members {
+  background-color: lightblue;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Popover_container {
+  padding: 10px 10px 10px 8px !important;
+}
+
+.Hold_Todo_container{
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  overflow-y: scroll;
+}
+.Completed_todo_container{
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+
+}
+
+.Hold_Todo_container::-webkit-scrollbar,.Completed_todo_container::-webkit-scrollbar{
+  width: 8px !important;
+}
+.Hold_Todo_container::-webkit-scrollbar-track ,.Completed_todo_container::-webkit-scrollbar-track{
+  background: #f1f1f1;
+}
+.Hold_Todo_container::-webkit-scrollbar-thumb ,.Completed_todo_container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px;
+}
+.Hold_Todo_container::-webkit-scrollbar-thumb:hover,.Completed_todo_container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media only screen and (max-width: 600px){
+  .new_todo_container{
+    width: 150%;
+  }
+  .Hold_Todo_container{
+    overflow-x: scroll;
+  }
+  .Todo_Title h3{
+    width: 100px;
+  }
+  .Hold_Todo_container::-webkit-scrollbar,.Completed_todo_container::-webkit-scrollbar{
+    height:0 !important;
+  }
+  .Hold_Todo_container::-webkit-scrollbar,.Completed_todo_container::-webkit-scrollbar{
+    width: 4px !important;
+  }
+  .Todo_Status_Completed,.Todo_Status_Pending,.Todo_Status_Progress{
+    width: 65px;
+  }
+  .Todo_functions{
+    height: 30px !important;
+    width: 50px !important;
+  }
+  .Todo_functions .MuiButton-label{
+    font-size: 0.825em !important;
+  }
+}

@@ -1,0 +1,271 @@
+.Dash_container {
+  width: 100%;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.03),
+    0px 7px 25px rgba(42, 139, 242, 0.03), 0px 5px 25px rgba(42, 139, 242, 0.07);
+  background-color: white;
+  position: relative;
+}
+.Dash_Header {
+  background: #eaeaec;
+  border-radius: 6px 6px 0px 0px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Dash_name {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.Dash_name img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.Dash_name h3 {
+  font-family: Mulish;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: black;
+  margin: 0 0 5px 10px;
+}
+.Dash_options {
+  background: #ffffff;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.03),
+    0px 7px 25px rgba(42, 139, 242, 0.03), 0px 5px 25px rgba(42, 139, 242, 0.07);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.Dash_options div {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin: 2px 0 0 7px;
+}
+
+.message_input_container > div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid lightgray;
+  padding: 15px 0 5px 0;
+}
+.message_input_container > div textarea {
+  border: 0;
+  resize: none;
+  width: 50% !important;
+  font-family: Mulish;
+  font-size: 0.9em;
+  letter-spacing: 0.04em;
+  scrollbar-width: none;
+}
+.message_input_container > div textarea::-webkit-scrollbar {
+  width: 0 !important;
+}
+.message_input_container > div textarea:focus {
+  outline: none;
+}
+.Send_section {
+  display: flex;
+}
+.Send_section svg {
+  cursor: pointer;
+}
+.send_icon {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(96.78deg, #7cb8f7 0%, #2a8bf2 100%);
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 8px;
+  margin-top: -4px;
+}
+.send_icon img {
+  width: 20px;
+  height: 20px;
+}
+.Other_user_message {
+  width: 30%;
+  padding: 10px;
+  margin-left: 5px;
+  padding-bottom: 6px;
+  background: linear-gradient(90.54deg, #60a9f6 0%, #2a8bf2 100%);
+  box-shadow: 10px 10px 25px rgba(42, 139, 242, 0.1),
+    15px 15px 35px rgba(42, 139, 242, 0.05),
+    10px 10px 50px rgba(42, 139, 242, 0.1);
+  border-radius: 0px 10px 10px 10px;
+}
+.Other_user_message h2 {
+  font-size: 1em;
+  font-family: Mulish;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: whitesmoke;
+}
+.Other_user_message i {
+  font-size: 0.6em;
+  color: white;
+  margin: 7px;
+  font-family: Mulish;
+}
+.Other_user_message p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.825em;
+  margin-top: 5px;
+  color: white;
+}
+.Other_user_message > div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.Chat_section_container {
+  display: flex;
+  margin-top: 10px;
+}
+.Chat_section_container img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: salmon;
+}
+.Chat_popover_section {
+  padding: 10px;
+}
+.Chat_popover_section div {
+  cursor: pointer;
+  font-family: Mulish;
+  font-size: 1em;
+  margin-top: 8px;
+  text-align: center;
+  transition: 0.2s all;
+}
+.Chat_popover_section div:hover {
+  background-color: lightgray;
+}
+
+.Chating_section{
+  height: 430px;
+  padding-bottom: 10px;
+  overflow-y: scroll;
+  padding-left: 10px;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+}
+
+.Chating_section::-webkit-scrollbar{
+  width: 6px;
+}
+.Chating_section::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+
+.Chating_section::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius:20px;
+}
+
+
+/* Handle on hover */
+.Chating_section::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.User_message{
+  width: 30%;
+  padding: 10px;
+  padding-bottom: 5px;
+  margin-left: 5px;
+  background-color: white;
+  box-shadow: 1px 5px 10px gray;
+  border-radius: 0px 10px 10px 10px;
+}
+
+
+.User_message h2 {
+  font-size: 1em;
+  font-family: Mulish;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: black;
+}
+.User_message i {
+  font-size: 0.6em;
+  color: gray;
+  margin: 7px;
+  font-family: Mulish;
+}
+.User_message p {
+  margin-top: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.825em;
+  color: black;
+}
+.User_message > div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.Go_back{
+  display: none;
+}
+
+@media only screen and (max-width: 600px){
+  .Dash_container{
+    position:absolute;
+    top: 0;
+    transition:0.2s all;
+    opacity: 0;
+  }
+  .Go_back{
+    display: block;
+    cursor: pointer;
+    width: 25px;
+    height:25px;
+    margin-left: 10px;
+  }
+  .Dash_options >div{
+    margin: 6px 0 0 8px;
+  }
+  .Dash_container{
+    height: 100vh;
+  }
+  .Chating_section{
+    height: 78vh;
+  }
+  .Dash_name img{
+    width: 30px;
+    height: 30px;
+  }
+  .User_message,.Other_user_message{
+    padding: 6px;
+
+  }
+  .User_message h2,.Other_user_message h2{
+    font-size: 0.825em;
+  }
+  .User_message i,.Other_user_message i{
+    margin-top: 2px;
+  }
+  .Chat_section_container img{
+    width: 25px;
+    height: 25px;
+  }
+  .send_icon{
+    margin-bottom: 5px;
+  }
+}

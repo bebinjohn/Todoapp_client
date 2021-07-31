@@ -1,0 +1,158 @@
+.content_wrapper {
+  display: flex;
+}
+.content_wrapper h2 {
+  padding: 0;
+  margin: 0;
+  font-family: Mulish;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.content_wrapper h2 span {
+  color: salmon;
+  font-weight: bold;
+}
+
+.Add_button {
+  display: flex;
+  width: 100px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  background-color: #884cb2;
+}
+.Add_button > div {
+  display: flex;
+}
+.Add_button > div span {
+  color: white;
+  font-family: Mulish;
+  margin-left: 2px;
+  font-size: 0.9em;
+}
+.Dialog_content {
+  width: 500px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.Dialog_content > div > div {
+  display: flex;
+  margin-top: 10px;
+}
+.Dialog_content > div {
+  margin-top: 20px;
+}
+.Dialog_content > div > div img {
+  width: 30px;
+  height: 30px;
+}
+.Dialog_content > div > div h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.4em;
+  font-family: Mulish;
+  margin-left: 10px;
+}
+.Todo_title input {
+  width: 60%;
+  height: 50px;
+  margin: 10px 0 0 40px;
+  font-family: Mulish;
+  font-size: 1em;
+}
+.Status_select {
+  margin: -10px 0 0 35px;
+}
+
+.Radio_group {
+  width: 60%;
+  height: 50px;
+  margin: 10px 0 0 30px;
+}
+
+.Dialog_cancel {
+  display: flex;
+  position: absolute;
+  cursor: pointer;
+  right: 20px;
+  justify-content: flex-end;
+}
+.Chat_button {
+  display: flex;
+  width: 100px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  background-color: rgb(182, 229, 229);
+}
+.Chat_button img {
+  width: 25px;
+  height: 25px;
+}
+.Chat_button span {
+  font-family: Mulish;
+  font-size: 1em;
+  color: black;
+  margin-left: 5px;
+}
+
+.Dialog_cancel div {
+  font-size: 1.4em;
+}
+@media only screen and (max-width: 600px){
+  .Add_button,.Chat_button{
+    height:30px;
+  }
+  .Add_button svg{
+    width: 15px;
+    height: 15px;
+  }
+  .content_wrapper{
+    margin-bottom: 20px;
+  }
+  .Dialog_content{
+    width: 100%;
+  }
+  .Todo_title input{
+    height: 30px;
+  }
+  .MuiDialogContent-root{
+    padding: 10px !important;
+  }
+
+
+.PrivateSwitchBase-root-151{
+  padding: 2px !important;
+}
+  .MuiFormGroup-root{
+    flex-wrap: nowrap !important;
+  }
+  .PrivateSwitchBase-root-5{
+    padding: 2px !important;
+  }
+  .Dialog_content > div > div {
+    margin-top: 5px;
+  }
+  .Todo_title input{
+    margin-top: 5px;
+  }
+  .Status_select{
+    width: 300px;
+  }
+  .Dialog_cancel{
+    z-index: 1;
+  }
+  .Add_members{
+    margin-top: 40px !important;
+  }
+  .Dialog_content{
+    overflow: hidden !important;
+  }
+}

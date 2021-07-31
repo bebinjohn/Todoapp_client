@@ -1,0 +1,114 @@
+.Navbar_container {
+  width: 15vw;
+  height: 100vh;
+  background-color: white;
+  box-shadow: 14.0351px 0px 25px rgba(86, 128, 248, 0.03),
+    35.0877px 0px 70px rgba(86, 128, 248, 0.05),
+    23.8596px 5.61404px 50px rgba(0, 0, 0, 0.02);
+}
+
+.Porfile_container {
+  text-align: center;
+  margin-top: 40px;
+}
+.Porfile_container > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: lightskyblue;
+}
+
+.Porfile_container p,
+.Each_Link p,
+.Logout_container p {
+  font-family: TT Norms;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+  line-height: 21px;
+  color: #0d1c2e;
+}
+.Porfile_container p {
+  font-weight: bold;
+  font-size: 1.4em;
+  font-family: Mulish;
+}
+.Link_container > .Each_Link {
+  display: flex;
+}
+.Link_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 50vh;
+  margin-left: 15px;
+}
+.Each_Link img {
+  width: 30px;
+  height: 30px;
+}
+.Each_Link {
+  text-decoration: none;
+  display: flex;
+  margin-top: 20px;
+}
+.Each_Link p,
+.Logout_container p {
+  color: #707c97;
+  font-size: 1.2em;
+  margin-left: 8px;
+}
+.Logout_container p {
+  margin-top: 3px;
+}
+
+.eachLink1 {
+  border-left: 2px solid blue;
+}
+.eachLink1 p {
+  color: blue;
+}
+
+.Logout_container {
+  cursor: pointer;
+  display: flex;
+  margin-top: 20px;
+}
+.close_Navbar{
+  display: none;
+}
+@media only screen and (max-width: 600px){
+  .Navbar_container{
+    position: absolute;
+    width: 40vw;
+    transform: translateX(-50vw);
+    transition: 0.3s all;
+  }
+  .Navbar_container1{
+    position: absolute;
+    width: 40vw;
+    background: white;
+    z-index: 2;
+    height: 100vh;
+    transform: translateX(0vw);
+    transition: 0.3s all;
+  }
+  .Porfile_container >img{
+    width: 70px;
+    height: 70px;
+    margin-left: 30px;
+  }
+  
+  .close_Navbar> div {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .close_Navbar {
+    float: right;
+    display: block;
+    cursor: pointer;
+    margin: 10px;
+  }
+}

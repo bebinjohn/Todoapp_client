@@ -1,0 +1,261 @@
+.Room_header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.All_rooms{
+  height: 75vh;
+  overflow-y: scroll;
+}
+.All_rooms::-webkit-scrollbar{
+  width: 0 !important;
+}
+.Room_header h2 {
+  font-family: Mulish;
+  font-size: 2em;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.01em;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  color: #0d1c2e;
+}
+.New_button_container{
+  padding: 10px;
+  background: linear-gradient(92.68deg, #7cb8f7 0%, #2a8bf2 100%);
+  box-shadow: 6px 6px 25px rgba(42, 139, 242, 0.15),
+    4px 4px 25px rgba(42, 139, 242, 0.05),
+    10px 6px 25px rgba(42, 139, 242, 0.15);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.New_button_container div {
+  font-family: Mulish;
+  font-size: 1em;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+.New_button_container div span {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  margin-right: 5px;
+}
+.Room_section{
+  margin-top: 20px;
+}
+
+.Room_container {
+  width: 94%;
+  padding: 10px;
+  cursor: pointer;
+  background: white;
+  box-shadow: 0px 10px 55px rgba(0, 0, 0, 0.05),
+    0px 4px 10px rgba(0, 0, 0, 0.25), 0px 10px 25px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  margin-top: 10px;
+}
+.Room_container .user_Details {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.Room_section {
+  padding: 0 20px 0 20px;
+}
+.user_Details img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.user_Details p {
+  font-family: TT Norms;
+  color: #0d1c2e;
+  text-transform: capitalize;
+  font-size: 1em;
+  width: 100%;
+  margin: 0 0 0 10px;
+  font-weight: bold;
+  padding: 0;
+}
+.All_rooms {
+  margin-top: 30px;
+}
+.Room_container > p {
+  margin: 8px 0 0 5px;
+  padding: 0;
+  font-size: 0.8em;
+  font-family: Mulish;
+  color: black;
+}
+.Option_container {
+  cursor: pointer;
+  background: gray;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+.Option_container div {
+  color: white;
+  margin: -3px 0 0px 4px;
+  font-weight: bold;
+}
+
+.members_list {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.members_list img {
+  width: 25px;
+  height: 25px;
+  margin-left: 3px;
+  border-radius: 50%;
+  background: red;
+}
+.more_container {
+  width: 25px;
+  height: 25px;
+  background: cyan;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin-left: 3px;
+  align-items: center;
+}
+.more_container div {
+  font-size: 0.9em;
+  font-family: Mulish;
+}
+.MuiDialog-paperWidthSm {
+  max-width: 60vw !important;
+}
+.Newroom_Dialog {
+  width: 30vw !important;
+}
+.Room_Name > div {
+  display: flex;
+}
+.Room_Name {
+  margin-top: 10px;
+}
+.Room_Name img {
+  width: 30px;
+  height: 30px;
+}
+.Room_Name label {
+  font-family: Mulish;
+  color: black;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 5px;
+  margin-left: 8px;
+}
+.Room_Name input {
+  width: 60%;
+  height: 30px;
+  margin-top: 7px;
+  margin-left: 38px;
+}
+.Room_Name input:focus {
+  outline: none;
+}
+.Room_Name textarea {
+  resize: none;
+  margin-left: 38px;
+  width: 60%;
+  height: 50px;
+  scrollbar-width: none;
+}
+.Room_Name textarea::-webkit-scrollbar {
+  width: 0 !important;
+}
+.close_dialog > div {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.close_dialog {
+  float: right;
+  cursor: pointer;
+}
+.Button_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.users_container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.online_symbol,.offline_symbol{
+  width:10px;
+  height: 10px;
+  margin-top: 3px;
+  border-radius: 50%;
+  background-color: lightgreen;
+}
+.online_user,.offline_user{
+  font-size: 1.2em;
+  font-family: Mulish cursive;
+  margin-left: 5px;
+  color:black;
+
+}
+.users_container >div{
+  display: flex;
+  margin-bottom: 8px;
+}
+.offline_user{
+  color: gray;
+  font-size: 1em;
+  text-transform: capitalize;
+}
+.offline_symbol{
+  background-color: salmon;
+}
+.users_section{
+    width: 15vw !important;
+    padding-bottom: 20px;
+}
+.burger{
+  display: none;
+}
+
+@media only screen and (max-width: 600px){
+  .Room_section{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    transition:0.2s all;
+    width: 90%;
+    padding:0 5% 0 5%;
+  }
+  .burger{
+    display: block;
+    margin-top: 12px;
+    cursor: pointer;
+  }
+  .burger_line{
+    border-bottom: 4px solid black;
+    border-radius: 9px;
+    margin-top: 1px;
+    width: 20px;
+  }
+  .Newroom_Dialog{
+    width: 55vw !important;
+  }
+  .Newroom_Dialog{
+    padding: 6px;
+  }
+  .users_section{
+    width: 50vw !important;
+  }
+}

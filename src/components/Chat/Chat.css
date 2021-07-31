@@ -1,0 +1,23 @@
+.Dashboard_container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #f3f3fb 0%, #fdfbfd 100%);
+  display: flex;
+}
+.Chat_section {
+  width: 82vw;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 32% 68%;
+}
+@media only screen and (max-width: 600px){
+  .Chat_section{
+    margin: 0;
+    width: 100vw;
+    display: block;
+  }
+  .Dashboard_container{
+    display: block;
+  }
+  
+}
