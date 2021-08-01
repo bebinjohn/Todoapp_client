@@ -126,7 +126,9 @@
   .MuiDialogContent-root{
     padding: 10px !important;
   }
-
+.Radio_group span{
+  padding: 0px !important;
+}
 
 .PrivateSwitchBase-root-151{
   padding: 2px !important;

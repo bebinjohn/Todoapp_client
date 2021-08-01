@@ -12,7 +12,6 @@
 }
 .Todo_Title h3 {
   width: 130px;
-  height: 40px;
   overflow: scroll;
   scrollbar-width: none;
 }
@@ -201,5 +200,8 @@
   }
   .Todo_functions .MuiButton-label{
     font-size: 0.825em !important;
+  }
+  .Todo_Title svg{
+    margin: 3px 3px 0 0;
   }
 }

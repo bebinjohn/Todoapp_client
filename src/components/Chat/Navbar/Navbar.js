@@ -11,6 +11,7 @@ export default function Navbar() {
         history.push('/')
         dispatch({type:"LOGOUT"})
     }
+    // ! In mobile for In and out 
     const closeNavbar=()=>{
         const $navbar=document.getElementById('Navbar_container')
       if($navbar.classList.contains('Navbar_container1')){

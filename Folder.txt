@@ -1,0 +1,10 @@
+// Additional functions
+
+Add one more page for creating the organization (CRUD)
+change the database
+Dont change the entrire structure
+//Just add For every user what organization they are in 
+(eg) in User document add Org_id:......... 
+For every Room what organization that Room.
+For every what organization the created Todo.
+

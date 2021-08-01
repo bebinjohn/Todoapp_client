@@ -1,8 +1,11 @@
+
+// * Reducers for Login and Logout Functions
+// Todo: store in local storage the status so that when user opens the app can enter in to app without login
+
 export const auth=(state={status:false,profile:{}},action)=>{
 
     switch(action.type){
         case 'GOOGLE_LOGIN':{
-            //  console.log('ji',action.payload)
             return {status:true,profile:action.payload}
         }
         case 'LOGIN':{

@@ -1,5 +1,6 @@
 import axios from 'axios'
 const url=process?.env?.REACT_APP_URL
+
 export const getdata=()=>async(dispatch)=>{
     dispatch({type:"OPEN_SNACK",payload:{status:"info",message:"Loading..."}})
     try {
@@ -12,6 +13,7 @@ export const getdata=()=>async(dispatch)=>{
 }
 
 //Checking function for all data are filled;
+// TODO : Can add Password checking and other authentication validation
 export const checkingfun=(dispatch,data)=>{
    for(let i in data ){
        if(data[i]===""||data[i].length===0){

@@ -9,6 +9,8 @@ export default function Hold() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const todos=useSelector(state=>state.todo)
     const auth=useSelector(state=>state.auth)
+
+    // * Realtime experience when user Created ,updated and deleted the posts
     useEffect(()=>{
         dispatch(getdata())
         const io=Socket(process?.env?.REACT_APP_URL,{ transports: ['websocket', 'polling', 'flashsocket'] })

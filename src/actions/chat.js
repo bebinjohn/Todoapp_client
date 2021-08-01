@@ -32,6 +32,9 @@ export const updateRoom=(updated_data)=>async(dispatch)=>{
             dispatch({type:"ERROR",payload:error.message})
         }
 }
+
+// * Function for exiting from the Room
+
 export const deleteRoom=(Details,user_id)=>async(dispatch)=>{
     dispatch({type:"OPEN_SNACK",payload:{status:"info",message:"Exiting..."}})
     try {

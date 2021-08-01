@@ -7,6 +7,11 @@ import moment from 'moment'
 import {postmessage,debounce,Pagination} from '../../../actions/chat'
 import {useSelector,useDispatch} from 'react-redux'
 import { Button } from '@material-ui/core';
+
+// Todo: can add Emoji choosing function in dashboard.
+// * Props ->chat,setchat -> coming for chat.js
+// * selected Rooms from Room container
+
 export default function Dashboard({chat,setchat}) {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const selector=useSelector(state=>state.auth?.profile)
@@ -16,29 +21,39 @@ export default function Dashboard({chat,setchat}) {
     const chat_scroll=useRef()
     const msg_length=useRef()
     const dispatch = useDispatch()
+
+    // * Function to set the message when user enters
     const message_type=(value)=>{
         setformat({
             ...messageformat,
             text:value
         })
     }
+    //! Function Triggered only in mobile
+    // * Used to open the Room when user clicks
     const openRoom=()=>{
         document.getElementById('dashboard_container').style.opacity=0;
         document.getElementById('dashboard_container').style.zIndex=0;
         document.getElementById('Room_section').style.zIndex=1;
         document.getElementById('Room_section').style.opacity=1;
     }
+
+    // * Triggered when user clicks the send button
     const onSend=()=>{
             text_area.current.value="";
             text_area.current.focus()
             dispatch(postmessage({Room_id:chat?.data._id,message:messageformat}))
     }
+
+    // *Useeffect hook for realtime experience .
     useEffect(()=>{
         const io=Socket(process?.env?.REACT_APP_URL,{ transports: ['websocket', 'polling', 'flashsocket'] })
         io.on('All_messages',(all)=>{
                 setmessages(all?.Messages);
         })
     },[])
+
+    //Triggered when user selects particular Room
     useEffect(()=>{
             axios.get(`${process?.env?.REACT_APP_URL}/chat/msg/${chat?.data._id}`).then((response)=>{
                 setmessages(response.data.Data?.Messages);
@@ -47,6 +62,8 @@ export default function Dashboard({chat,setchat}) {
             text_area.current.focus()
             
     },[chat])
+
+    // * for scrooling functions
 
     useEffect(()=>{
         // console.log(msg_length,messages.length)

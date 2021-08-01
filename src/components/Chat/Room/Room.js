@@ -10,6 +10,10 @@ export default function Room({setchat}) {
    const dispatch=useDispatch()
    const Rooms=useSelector((state)=>state.Room)
    const auth=useSelector(state=>state.auth?.profile?.user)
+
+   // * Realtime experience Trigger when user created,Updated or exited from the Rooms.
+   // Todo: Add One default which will have welcome messages for all the new users
+
     useEffect(()=>{
       const io=Socket(process?.env?.REACT_APP_URL,{ transports: ['websocket', 'polling', 'flashsocket'] })
       io.emit('NewUser',auth?._id)
@@ -30,13 +34,14 @@ export default function Room({setchat}) {
       }
       return false;
     }
-
+    //! In mobile open the dashborad when users comes back from the Dashboard
     const openDashboard=()=>{
       document.getElementById('dashboard_container').style.opacity=1;
       document.getElementById('dashboard_container').style.zIndex=1;
       document.getElementById('Room_section').style.opacity=0;
       document.getElementById('Room_section').style.zIndex=0;
     }
+     //! In mobile open the Navbar
     const openNavbar=()=>{
       const $navbar=document.getElementById('Navbar_container')
       if($navbar.classList.contains('Navbar_container')){
@@ -45,6 +50,7 @@ export default function Room({setchat}) {
       $navbar.classList.add('Navbar_container1')
       
     }
+    // * when user clicks any Rooms
     const openChat=(index,each)=>{
       setchat({
         index:index,

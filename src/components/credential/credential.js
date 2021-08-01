@@ -64,7 +64,7 @@ export default function Credentials(){
             <p>or {state?"Login":"signup"} with</p>
             
             <GoogleLogin
-                clientId="627841406523-iigpqq5gsoija8hb26eq4m37703j0ofq.apps.googleusercontent.com"
+                clientId={process?.env?.REACT_APP_API_KEY}
                 render={renderProps => (
                     <div onClick={renderProps.onClick} disabled={renderProps.disabled} className='google_signin'>
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">

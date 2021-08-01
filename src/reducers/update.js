@@ -1,3 +1,5 @@
+//For dialog options  to clear the data whem user clicks the update,delte
+
 export const update=(state={open:false,Details:{Title: "", Status: "", Type: "", Members: [] },submit:true},action)=>{
     switch (action.type){
         case 'CHANGE':{

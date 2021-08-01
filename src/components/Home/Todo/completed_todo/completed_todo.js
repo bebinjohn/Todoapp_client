@@ -9,13 +9,7 @@ export default function Hold() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const todos=useSelector(state=>state.todo)
     const auth=useSelector(state=>state.auth)
-    // useEffect(()=>{
-    //     const io=Socket('http://localhost:4000/',{ transports: ['websocket', 'polling', 'flashsocket'] })
-    //     io.on('message',()=>{
-    //         dispatch(getdata())
-    //     })
-    // },[])
-    // console.log(todos)
+    
     const update_each=useRef()
     const handleClick = (event,each) => {
         setAnchorEl(event.currentTarget);
